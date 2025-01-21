@@ -1,0 +1,16 @@
+class Solution {
+    public int numWaterBottles(int numBottles, int numExchange) {
+        if (numBottles<numExchange){
+            return numBottles;
+        }
+        int a=numBottles;
+        int sum=0;
+        while(numBottles>=numExchange){
+            a = a+numBottles/numExchange ;
+            sum=a;
+            numBottles=numBottles/numExchange     +(numBottles%numExchange);
+        }
+        return sum;
+        
+    }
+}
