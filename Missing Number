@@ -1,0 +1,33 @@
+class Solution {
+    public int missingNumber(int[] nums) {
+        int d= nums.length;
+        Arrays.sort(nums);
+
+        int min = nums[0];
+        int max =d;
+        
+        int num=0;
+        int i=0;
+        if (nums[d-1]!=max){
+            return d;
+        }
+        else{
+        while(i<d){
+            if (nums[i]==min  ){
+                num=0;
+                min = min+1;
+            }
+            else{
+                num=i;
+                break;
+            }
+            i++;
+
+        
+            }
+        }
+            return num;
+        
+        
+    }
+}
