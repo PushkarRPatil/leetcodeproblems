@@ -1,0 +1,22 @@
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int n=numbers.length-1;//1,3,5,7        6
+        int begin=0;//1
+        int []a=new int[2];
+        while(begin < n){
+            int temp = numbers[begin]+numbers[n];// 8
+            if(temp==target){
+                a[0]=begin+1;
+                a[1]=n+1;
+                return a;
+            }
+            else if(temp < target){
+                begin++;
+            }
+            else{
+                n--;
+            }
+        }
+        return a;
+        }
+}
