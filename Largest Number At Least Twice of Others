@@ -1,0 +1,18 @@
+class Solution {
+    public int dominantIndex(int[] nums) {
+    int maxindex=0;
+    for (int i=0;i<nums.length;i++){
+        if (nums[maxindex]<nums[i]){
+            maxindex=i;
+        }
+    }
+    for(int i=0;i<nums.length;i++){
+        if(maxindex!=i && nums[maxindex] < nums[i]*2 ){
+            return -1;
+        }
+    }
+    return maxindex;
+
+        
+    }
+}
