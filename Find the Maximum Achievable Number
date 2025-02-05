@@ -1,0 +1,7 @@
+class Solution {
+    public int theMaximumAchievableX(int num, int t) {
+        int sum=2*t+num;
+        return sum;
+        
+    }
+}
